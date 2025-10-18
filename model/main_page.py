@@ -23,5 +23,4 @@ class MainPage(BasePage):
     def click_trial_button(self):
         self.trial_button.click()
 
-    def should_have_url_containing(self, expected_url: str):
-        browser.should(have.url_containing(expected_url))
+
