@@ -12,7 +12,7 @@ from selene.support.shared import browser
 
 
 @pytest.fixture(scope="function", autouse=True)
-def open_browser():
+def setup_browser():
     browser.config.base_url = "https://mybook.ru"
 
     driver_options = webdriver.ChromeOptions()
