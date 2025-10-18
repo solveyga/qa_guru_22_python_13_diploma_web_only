@@ -8,8 +8,13 @@ from utils import attaches
 from dotenv import load_dotenv
 import os
 
-from selene.support.shared import browser
+from model.main_page import MainPage
 
+@pytest.fixture
+def open_main_page():
+    main_page = MainPage()
+    main_page.open()
+    yield main_page
 
 @pytest.fixture(scope="function", autouse=True)
 def setup_browser():
