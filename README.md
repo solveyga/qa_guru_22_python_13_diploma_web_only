@@ -1,0 +1,1 @@
+# qa_guru_22_python_13_diploma_web_only
