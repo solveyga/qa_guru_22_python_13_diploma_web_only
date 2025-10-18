@@ -1,7 +1,4 @@
 import allure
-from selene.support.conditions import be, have
-from selene.support.shared import browser
-from selene.support.shared.jquery_style import s
 from model.main_page import MainPage
 
 
