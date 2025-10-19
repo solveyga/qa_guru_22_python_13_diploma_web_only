@@ -15,7 +15,6 @@ def test_main_page_slogan():
     check_trial_button(main_page, expected_button_text)
     check_trial_url(main_page, expected_url)
 
-
 @allure.step('Открыть страницу')
 def open_page(main_page):
     main_page.open()
