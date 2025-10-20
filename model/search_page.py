@@ -1,10 +1,5 @@
 from selene import have
-from selene.support.shared import browser
-#from data.users import User, Gender, Hobby
-import os
-import allure
 from selene.support.conditions import be, have
-from selene.support.shared import browser
 from selene.support.shared.jquery_style import s, ss
 from model.base_page import BasePage
 
@@ -44,8 +39,3 @@ class SearchPage(BasePage):
     def should_be_all_sections(self):
         for i, name in enumerate(self.expected_tab_names[1:]):
             self.sections[i].should(have.text(name))
-
-    # def should_all_sections_have_content(self):
-    #     for i in range(1, len(self.expected_tab_names)):
-    #         content_blocks = self.sections[i].ss('.sc-1bmhumr-6.exptXL')
-    #         content_blocks.should(have.size_greater_than(0))
