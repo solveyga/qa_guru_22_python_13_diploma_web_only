@@ -3,7 +3,7 @@ from model.search_page import SearchPage
 
 
 @allure.story("Проверка поиска с главной страницы")
-def test_search_prom_main_page(open_main_page):
+def test_search_from_main_page(open_main_page):
 
     search_page = SearchPage()
     query_string = "пикник на обочине"
