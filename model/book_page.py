@@ -6,13 +6,15 @@ from model.base_page import BasePage
 
 class BookPage(BasePage):
     def __init__(self):
-        self.title = s('.bzVsYa')
-        self.author = s('.dey4wx-1.jVKkXg')
+        self.title = s(".bzVsYa")
+        self.author = s(".dey4wx-1.jVKkXg")
         self.email_required_field = s('input[type="email"]')
         self.read_online = s('button[type="button"].ant-btn-primary')
-        self.read_fragment = s('.ant-btn-primary.ant-btn-lg.ant-btn-block')
-        self.unauthorized_email_explain = s('.ant-form-item-explain')
-        self.subscription_button = s('.ant-btn.sc-1t4pdxh-0.kAlGSv.ant-btn-primary.ant-btn-lg')
+        self.read_fragment = s(".ant-btn-primary.ant-btn-lg.ant-btn-block")
+        self.unauthorized_email_explain = s(".ant-form-item-explain")
+        self.subscription_button = s(
+            ".ant-btn.sc-1t4pdxh-0.kAlGSv.ant-btn-primary.ant-btn-lg"
+        )
 
     def should_have_expected_title(self, expected_title: str):
         self.title.should(have.exact_text(expected_title))
@@ -40,4 +42,3 @@ class BookPage(BasePage):
 
     def should_be_subscription_button(self):
         self.subscription_button.should(be.visible)
-

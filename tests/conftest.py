@@ -1,14 +1,15 @@
 import pytest
 
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
 from selene.support.shared import browser
+from selenium.webdriver.chrome.options import Options
 
 from utils import attaches
 from dotenv import load_dotenv
 import os
 
 from model.main_page import MainPage
+
 
 @pytest.fixture
 def open_main_page():
@@ -19,7 +20,7 @@ def open_main_page():
 
 @pytest.fixture(scope="function", autouse=True)
 def setup_browser():
-    
+
     browser.config.base_url = "https://mybook.ru"
 
     driver_options = webdriver.ChromeOptions()
@@ -31,7 +32,7 @@ def setup_browser():
 
     yield
     browser.quit()
-    '''
+    """
 
 DEFAULT_BROWSER_VERSION = "128.0"
 
@@ -86,4 +87,4 @@ def setup_browser(request):
     attaches.add_video(browser, selenoid_url)
 
     browser.quit()
-    '''
+    """
