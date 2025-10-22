@@ -1,1 +1,9 @@
-# qa_guru_22_python_13_diploma_web_only
+Запуск тестов:
+```
+pytest tests
+```
+
+Построение отчета после выполнения тестов:
+```
+allure serve allure-results
+```
