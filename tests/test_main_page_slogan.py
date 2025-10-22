@@ -3,7 +3,8 @@ from model.main_page import MainPage
 
 
 @allure.story("Проверка слогана на главной странице")
-def test_main_page_slogan():
+def test_main_page_slogan(setup_browser):
+    browser = setup_browser
     main_page = MainPage()
 
     expected_slogan = "MyBook — читайте и слушайте по одной подписке"

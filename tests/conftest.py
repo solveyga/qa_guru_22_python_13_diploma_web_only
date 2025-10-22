@@ -17,7 +17,7 @@ def open_main_page():
     main_page.open()
     yield main_page
 
-
+    """
 @pytest.fixture(scope="function", autouse=True)
 def setup_browser():
 
@@ -87,4 +87,4 @@ def setup_browser(request):
     attaches.add_video(browser, selenoid_url)
 
     browser.quit()
-    """
+

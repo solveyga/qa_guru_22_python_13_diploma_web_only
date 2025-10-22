@@ -3,7 +3,8 @@ from model.search_page import SearchPage
 
 
 @allure.story("Проверка поиска с главной страницы")
-def test_search_from_main_page(open_main_page):
+def test_search_from_main_page(setup_browser, open_main_page):
+    browser = setup_browser
 
     search_page = SearchPage()
     query_string = "пикник на обочине"
@@ -15,7 +16,8 @@ def test_search_from_main_page(open_main_page):
 
 
 @allure.story("Проверка элементов на странице поиска")
-def test_search_page_elements():
+def test_search_page_elements(setup_browser):
+    browser = setup_browser
     search_page = SearchPage()
 
     open_page(search_page)
