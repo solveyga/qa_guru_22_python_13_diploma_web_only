@@ -7,3 +7,5 @@ pytest tests
 ```
 allure serve allure-results
 ```
+
+Требуется файл .env с данными для доступа к удаленному запуску браузера.
